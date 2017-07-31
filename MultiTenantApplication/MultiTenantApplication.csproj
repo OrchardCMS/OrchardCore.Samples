@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="OrchardCore.Modules.Mvc" Version="2.0.0-preview-2649" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Module1\Module1.csproj" />
+    <ProjectReference Include="..\Module2\Module2.csproj" />
+  </ItemGroup>
+
+</Project>
