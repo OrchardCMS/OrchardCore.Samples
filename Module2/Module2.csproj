@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.AsModule" Version="2.0.0-preview-2649" />
+    <PackageReference Include="Orchard.Environment.Shell.Abstractions" Version="2.0.0-preview-2682" />
+    <PackageReference Include="OrchardCore.AsModule" Version="2.0.0-preview-2682" />
   </ItemGroup>
 
 </Project>

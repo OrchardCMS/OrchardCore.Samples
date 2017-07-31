@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
-    <PackageReference Include="OrchardCore.Modules.Mvc" Version="2.0.0-preview-2649" />
+    <PackageReference Include="OrchardCore.Modules.Mvc" Version="2.0.0-preview-2682" />
   </ItemGroup>
 
   <ItemGroup>

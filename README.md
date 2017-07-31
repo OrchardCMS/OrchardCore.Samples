@@ -39,9 +39,9 @@ Open either Web application folder, `ModularApplication` or `MultiTenantApplicat
 
 ### Multi-tenant
 
-The tenants are prefixed with `/acme` and `/contoso`. For instance, accessing `/acme/hello` will trigger invoke the middleware defined in Module2.
+The tenants are prefixed with `/acme` and `/contoso`. For instance, accessing `/acme/hello` will trigger invoke the middleware defined in Module2. You can check which tenant is invoked by accessing the `/acme/info` or `/acme/info` urls.
 
-The tenants can be modified by editing the `tenants.json` file and restarting the application. 
+The tenants can be modified by editing the `tenants.json` file and restarting the application.
 
 ## Creating new Modules
 

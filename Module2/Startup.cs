@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Modules;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using Orchard.Environment.Shell;
 
 namespace Module2
 {
@@ -21,6 +22,16 @@ namespace Module2
             app.Map("/hello", branch => 
                 branch.Run(context => context.Response.WriteAsync("Hello World"))
             );
+
+
+            app.Map("/info", branch =>
+            {
+                branch.Run(context =>
+                {
+                    var shellSettings = context.RequestServices.GetRequiredService<ShellSettings>();
+                    return context.Response.WriteAsync($"Request from tenant: {shellSettings.Name}");
+                });
+            });
         }
     }
 }

@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
-    <PackageReference Include="OrchardCore.AsModule" Version="2.0.0-preview-2649" />
+    <PackageReference Include="OrchardCore.AsModule" Version="2.0.0-preview-2682" />
   </ItemGroup>
 
 </Project>
