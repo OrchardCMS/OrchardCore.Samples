@@ -14,11 +14,16 @@ An ASP.NET MVC Core application that references the modules and starts two tenan
 
 #### Module1
 
-A sample module containing an ASP.NET Mvc Core controller and view.
+A sample module containing an ASP.NET MVC Core controller and a view.
+
+The action can be accessed at `/Module1/Home/Index`.
 
 #### Module2
 
-A sample module registering a custom middleware that renders a message when `/hello` is requested.
+A sample module registering a custom middleware.
+
+- `/hello` emits `hello world`
+- `/info` emits the name of the current tenant
 
 ## Running
 
@@ -39,17 +44,18 @@ Open either Web application folder, `ModularApplication` or `MultiTenantApplicat
 
 ### Multi-tenant
 
-The tenants are prefixed with `/acme` and `/contoso`. For instance, accessing `/acme/hello` will trigger invoke the middleware defined in Module2. You can check which tenant is invoked by accessing the `/acme/info` or `/acme/info` urls.
+The tenants are prefixed with `/acme` and `/contoso`. For instance, accessing `/acme/hello` will invoke the middleware defined in **Module2**. You can check which tenant is invoked by accessing the `/acme/info` or `/contoso/info` urls.
 
 The tenants can be modified by editing the `tenants.json` file and restarting the application.
 
 ## Creating new Modules
 
-Modules are .NET Standard 1.6 class libraries that reference the **OrchardCore.AsModule ** Nuget Package.
+Modules are .NET Standard 1.6 class libraries that reference the **OrchardCore.AsModule** Nuget Package.
+
 The Orchard Core Nuget packages are available in a MyGet feed at this url: `https://www.myget.org/F/orchardcore-preview/api/v3/index.json`
 
 From the Web application, just reference a module project and it will be available.
-Optionally modules can be packaged as Nuget packages and made available on Nuget or MyGet, including static files and Views.
 
+Optionally modules can be packaged as Nuget packages and made available on Nuget or MyGet, including static files and Views.
 More examples of modules can be found on the Orchard Core CMS application on this repository: https://github.com/OrchardCMS/Orchard2
 
