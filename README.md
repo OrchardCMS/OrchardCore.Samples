@@ -1,6 +1,6 @@
 # Orchard Core Samples
 
-A sample web application demonstrating how to build a Modular and Multi-Tenant ASP.NET Core application using the Orchard Core framework.
+A sample web application demonstrating how to build a Modular and Multi-Tenant ASP.NET Core application using the Orchard Core Framework. You can also watch a video providing a step by step demonstration of these samples here https://channel9.msdn.com/Shows/On-NET/Sbastien-Ros-Modular-ASPNET-apps
 
 ## Contents of the solution
 
