@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Orchard.Environment.Shell.Abstractions" Version="2.0.0-preview-2682" />
-    <PackageReference Include="OrchardCore.AsModule" Version="2.0.0-preview-2682" />
+    <PackageReference Include="OrchardCore.Environment.Shell.Abstractions" Version="1.0.0-beta1-*" />
+    <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta1-*" />
   </ItemGroup>
 
 </Project>
