@@ -3,14 +3,14 @@
     "State": "Running",
     // "RequestUrlHost": "contoso.com",
     "RequestUrlPrefix": "contoso",
-    "Features": [ "Module1", "Module2", "Orchard.Mvc" ],
+    "Features": [ "Module1", "Module2", "OrchardCore.Mvc" ],
     "MyConnectionString": "connectionstring1"
   },
   "Acme": {
     "State": "Running",
     // "RequestUrlHost": "acme.com, acme.org",
     "RequestUrlPrefix": "acme",
-    "Features": [ "Module1", "Module2", "Orchard.Mvc" ],
+    "Features": [ "Module1", "Module2", "OrchardCore.Mvc" ],
     "MyConnectionString": "connectionstring2"
   }
 }
