@@ -6,9 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.AsModule" Version="1.0.0-beta1-*" />
-
-    <!-- Add support for ASP.NET Core MVC by referencing the corresponding module -->
-    <PackageReference Include="OrchardCore.Modules.Mvc" Version="1.0.0-beta1-*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

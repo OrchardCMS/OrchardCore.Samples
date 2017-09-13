@@ -12,11 +12,15 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
     <PackageReference Include="OrchardCore.Modules" Version="1.0.0-beta1-*" />
+
+    <!-- Add support for ASP.NET Core MVC by referencing the corresponding module -->
+    <PackageReference Include="OrchardCore.Modules.Mvc" Version="1.0.0-beta1-*" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Module1\Module1.csproj" />
     <ProjectReference Include="..\Module2\Module2.csproj" />
+
   </ItemGroup>
 
 </Project>
