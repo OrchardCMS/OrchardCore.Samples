@@ -12,7 +12,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
 
-    <!-- Add support for ASP.NET Core MVC by referencing the corresponding module -->
+    <!-- References the MVC bundle to mark this application as modular -->
     <PackageReference Include="OrchardCore.Modules.Mvc" Version="1.0.0-beta1-*" />
   </ItemGroup>
 
