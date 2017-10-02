@@ -11,9 +11,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
-    
-    <!-- References the MVC bundle to mark this application as modular -->
-    <PackageReference Include="OrchardCore.Modules.Mvc" Version="1.0.0-beta1-*" />
+
+    <!-- References the MVC targets to mark this application as modular and reference the MVC module -->
+    <PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.0.0-beta1-*" />
   </ItemGroup>
 
   <ItemGroup>

@@ -50,12 +50,19 @@ The tenants can be modified by editing the `tenants.json` file and restarting th
 
 ## Creating new Modules
 
-Modules are .NET Standard 1.6 class libraries that reference the **OrchardCore.AsModule** Nuget Package.
+Modules are .NET Standard 2.0 class libraries that reference the **OrchardCore.Module.Targets** Nuget Package.
 
 The Orchard Core Nuget packages are available in a MyGet feed at this url: `https://www.myget.org/F/orchardcore-preview/api/v3/index.json`
 
 From the Web application, just reference a module project and it will be available.
 
 Optionally modules can be packaged as Nuget packages and made available on Nuget or MyGet, including static files and Views.
-More examples of modules can be found on the Orchard Core CMS application on this repository: https://github.com/OrchardCMS/Orchard2
+More examples of modules can be found on the Orchard Core CMS application on this repository: https://github.com/OrchardCMS/OrchardCore
 
+## Creating new modular applications
+
+A modular application only needs to reference one of these targets packages:
+
+- **OrchardCore.Application.Targets**: Allows the application to reference and import modules.
+- **OrchardCore.Application.Mvc.Targets**: Same as **OrchardCore.Application.Targets** but also references the **OrchardCore.Mvc** module
+- **OrchardCore.Application.Nancy.Targets**: Same as **OrchardCore.Application.Targets** but also references the **OrchardCore.Nancy** module
