@@ -6,15 +6,15 @@ A sample web application demonstrating how to build a Modular and Multi-Tenant A
 
 #### ModularApplication
 
-An ASP.NET MVC Core application that references the modules.
+An ASP.NET Core MVC application that references the modules.
 
 #### MultiTenantApplication
 
-An ASP.NET MVC Core application that references the modules and starts two tenants with different modules enabled.
+An ASP.NET Core MVC application that references the modules and starts two tenants with different modules enabled.
 
 #### Module1
 
-A sample module containing an ASP.NET MVC Core controller and a view.
+A sample module containing an ASP.NET Core MVC controller and a view.
 
 The action can be accessed at `/Module1/Home/Index`.
 
