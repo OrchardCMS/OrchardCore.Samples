@@ -11,7 +11,9 @@ namespace MultiTenantApplication
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddModules(c => c.WithTenants());
+            services.AddOrchardCore()
+                    .AddMvc()
+                    .WithTenants();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,7 +26,7 @@ namespace MultiTenantApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseModules();
+            app.UseOrchardCore();
         }
     }
 }
