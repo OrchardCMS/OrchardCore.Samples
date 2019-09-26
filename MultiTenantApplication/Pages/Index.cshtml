@@ -1,0 +1,65 @@
+﻿@page
+@using Microsoft.Extensions.Configuration
+@using OrchardCore.Environment.Shell.Configuration
+@inject IShellConfiguration configuration
+@inject OrchardCore.Modules.IApplicationContext app
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@configuration["CustomTitle"]</h1>
+    <p class="lead">@configuration["CustomSetting"]</p>
+</div>
+
+<h2>Tenants</h2>
+<ul>
+    <li><a href="/">default</a></li>
+    <li><a href="/customer-a">customer-a</a></li>
+    <li><a href="/customer-b">customer-b</a></li>
+</ul>
+
+<h2>Module Endpoints</h2>
+<p class="alert alert-info">
+    👉 Don't be surprised by 404s because not all Modules are enabled for all Tenants.
+    Consult the "OrchardCore" section in appsettings.json to see and modify the "Features" that are turned on for each Tenant.
+</p>
+<ul>
+    <li>
+        MultiTenantApplication - <span class="badge badge-success">default</span> <span class="badge badge-success">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="~/">Application Index Page</a></li>
+            <li><a href="~/About">Application About Page</a></li>
+            <li><a href="~/Privacy">Application Privacy Page</a></li>
+        </ul>
+    </li>
+    <li>
+        Module1 - <span class="badge badge-danger">default</span> <span class="badge badge-success">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="@(Url.Action("Index", "Home", new { area = "Module1" }))">Module1 Home Index Controller Action</a></li>
+            <li><a asp-area="Module1" asp-page="/about">Module1 About Page</a></li>
+            <li><a href="@(Url.Action("Get", "WeatherForecast", new { area = "Module1" }))">Module1 WeatherForecast Get Controller Action</a></li>
+            <li><a href="~/Module1/Kittens.jpg">Module1 wwwroot Kittens.jpg</a></li>
+        </ul>
+    </li>
+    <li>
+        Module2 - <span class="badge badge-danger">default</span> <span class="badge badge-danger">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="~/Module2/hello">Module2 Hello Middleware</a></li>
+        </ul>
+    </li>
+</ul>
+
+<h2>OrchardCore.Environment.Shell.Configuration.IShellConfiguration:</h2>
+<partial name="_Configuration" model="configuration" />
+
+<h2>OrchardCore.Modules.IApplicationContext:</h2>
+<ul>
+    <li>ModulePath: @app.Application.ModulePath</li>
+    <li>ModuleRoot: @app.Application.ModuleRoot</li>
+    <li>Modules: @string.Join(", ", app.Application.Modules.Select(m => m.Name))</li>
+    <li>Name: @app.Application.Name</li>
+    <li>Path: @app.Application.Path</li>
+    <li>Root: @app.Application.Root</li>
+</ul>
