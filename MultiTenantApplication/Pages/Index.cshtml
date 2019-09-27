@@ -1,7 +1,7 @@
 ﻿@page
-@using Microsoft.Extensions.Configuration
+@using OrchardCore.Environment.Shell
 @using OrchardCore.Environment.Shell.Configuration
-@inject IShellConfiguration configuration
+@inject ShellSettings settings
 @inject OrchardCore.Modules.IApplicationContext app
 @model IndexModel
 @{
@@ -9,8 +9,8 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">@configuration["CustomTitle"]</h1>
-    <p class="lead">@configuration["CustomSetting"]</p>
+    <h1 class="display-4">@settings.ShellConfiguration["CustomTitle"]</h1>
+    <p class="lead">@settings.ShellConfiguration["CustomSetting"]</p>
 </div>
 
 <h2>Tenants</h2>
@@ -47,12 +47,21 @@
         Module2 - <span class="badge badge-danger">default</span> <span class="badge badge-danger">customer-a</span> <span class="badge badge-success">customer-b</span>
         <ul>
             <li><a href="~/Module2/hello">Module2 Hello Middleware</a></li>
+            <li><a href="~/info">Module2 Info Middleware</a></li>
         </ul>
     </li>
 </ul>
 
-<h2>OrchardCore.Environment.Shell.Configuration.IShellConfiguration:</h2>
-<partial name="_Configuration" model="configuration" />
+<h2>OrchardCore.Environment.Shell.ShellSettings:</h2>
+<ul>
+    <li>Name: @settings.Name</li>
+    <li>RequestUrlHost: @settings.RequestUrlHost</li>
+    <li>RequestUrlPrefix: @settings.RequestUrlPrefix</li>
+    <li>State: @settings.State</li>
+    <li>
+        ShellConfiguration: <partial name="_Configuration" model="settings.ShellConfiguration" />
+    </li>
+</ul>
 
 <h2>OrchardCore.Modules.IApplicationContext:</h2>
 <ul>
