@@ -2,7 +2,7 @@
 
 Sample web applications demonstrating how to build a Modular and Multi-Tenant ASP.NET Core application using the Orchard Core Framework.
 
-You can watch a video providing a step by step demonstration of an older version of these samples here https://channel9.msdn.com/Shows/On-NET/Sbastien-Ros-Modular-ASPNET-apps
+You can watch a video providing a step by step demonstration of building a modular, multi-tenant Orchard Core Framework application here https://t.co/952D6EoEdA. It was presented at .NET Conf 2019 using Orchard Core RC1. The names of the C# projects in the demo do not match those these sample projects, but the demonstration is very similar to these samples.
 
 ## Contents of the Solution
 
