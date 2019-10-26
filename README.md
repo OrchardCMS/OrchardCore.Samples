@@ -5,6 +5,8 @@ Sample web applications demonstrating how to build a Modular and Multi-Tenant AS
 You can watch a video providing a step by step demonstration of building a modular, multi-tenant Orchard Core Framework application here https://www.youtube.com/watch?v=yrQaKv2mxFU&list=PLReL099Y5nRd04p81Q7p5TtyjCrj9tz1t. It was presented at .NET Conf 2019 using Orchard Core RC1. The names of the C# projects in the demo do not match these sample projects, but the demonstration is very similar to these samples.
 
 ## Contents of the Solution
+- Youtube Link : http://bit.ly/31KxJBn
+- Powerpoint Missing ??? @jeremycook
 
 ### MultiTenantApplication
 
