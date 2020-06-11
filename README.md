@@ -54,7 +54,7 @@ In the MultiTenantApplication sample, the appsettings.json is used to configure 
 
 Modules can be .NET Standard 2.0 class libraries or .NET Core 3.0 class libraries that reference the **OrchardCore.Module.Targets** Nuget Package.
 
-If you need it, development Orchard Core Nuget packages are available in a MyGet feed at this url: `https://www.myget.org/F/orchardcore-preview/api/v3/index.json`
+If you need it, development Orchard Core Nuget packages are available in a MyGet feed at this url: `https://nuget.cloudsmith.io/orchardcore/preview/v3/index.json`
 
 Optionally, modules can be packaged as Nuget packages and made available on Nuget or MyGet, including static files and views.
 The Orchard Core CMS builds upon the Orchard Core Framework.
