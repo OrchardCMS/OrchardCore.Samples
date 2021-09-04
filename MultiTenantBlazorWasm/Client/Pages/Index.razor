@@ -1,0 +1,21 @@
+﻿@page "/"
+@using MultiTenantBlazorWasm.Shared
+@inject HttpClient Http
+
+<h1>Hello, Orchard Core!</h1>
+
+Welcome Tenant <b>@TenantName</b> to your new app.
+
+<SurveyPrompt Title="Is Orchard Core Framework + Blazor working for you?" />
+
+
+@code {
+    private string TenantName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var info = await Http.GetFromJsonAsync<TenantInfo>("api/TenantInfo");
+        TenantName = info.TenantName;
+    }
+
+}

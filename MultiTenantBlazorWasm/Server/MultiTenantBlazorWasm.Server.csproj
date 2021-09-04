@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>276c3158-edeb-44f5-97b3-4804ed3b464e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.9" />
+    <PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.1.0-preview-16448" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\MultiTenantBlazorWasm.Client.csproj" />
+    <ProjectReference Include="..\Shared\MultiTenantBlazorWasm.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

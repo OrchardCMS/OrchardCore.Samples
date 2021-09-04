@@ -1,0 +1,16 @@
+<div class="alert alert-secondary mt-4" role="alert">
+    <span class="oi oi-pencil mr-2" aria-hidden="true"></span>
+    <strong>@Title</strong>
+
+    <span class="text-nowrap">
+        Visit Orchard Core
+        <a target="_blank" class="font-weight-bold" href="https://github.com/OrchardCMS/OrchardCore">Source at Github</a> OR <br />
+        Look <a target="_blank" class="font-weight-bold" href="https://docs.orchardcore.net/en/latest/">Documentation</a>
+    </span>.
+</div>
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string Title { get; set; }
+}
