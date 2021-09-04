@@ -185,3 +185,4 @@ nuget.exe
 node_modules/*
 
 wwwroot
+!MultiTenantBlazorWasm/Client/wwwroot
