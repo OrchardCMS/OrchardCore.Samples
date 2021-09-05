@@ -137,4 +137,3 @@ A modular application that hosts module only needs to reference one of these tar
 
 - **OrchardCore.Application.Targets**: Allows the application to reference and import modules, and optionally use multi-tenancy.
 - **OrchardCore.Application.Mvc.Targets**: Same as **OrchardCore.Application.Targets** but also references the **OrchardCore.Mvc** module
-- **OrchardCore.Application.Nancy.Targets**: Same as **OrchardCore.Application.Targets** but also references the **OrchardCore.Nancy** module
