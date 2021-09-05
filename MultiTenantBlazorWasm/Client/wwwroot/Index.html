@@ -9,7 +9,7 @@
         // Set base url to for tenant
         var base = window.location.pathname.split('/')[1];
         var url = '/';
-        if (base !== '') {
+        if (base !== '' && base !== 'Index.html') {
             url = '/' + base + '/';
         }
         document.write("<base href='" + url + "' />");
