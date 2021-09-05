@@ -36,7 +36,7 @@ Open the website in your browser, and use the URLs or links it provides to explo
 ### From the Command Line
 
 #### To Run Modular Application 
-
+Execute following commands,
 ```dotnetcli
 cd ModularApplication
 dotnet restore
@@ -46,13 +46,12 @@ dotnet run
 
 And, 
 - Open Url `https://localhost:5001` in browser to launch the modular application.
-- Open Url https://localhost:5001/WeatherForecast in browser to get the weather from Module1. 
-- Open Url https://localhost:5001/Module2/hello to to run endpoint from Module2.
+- Open Url `https://localhost:5001/WeatherForecast` in browser to get the weather from Module1. 
+- Open Url `https://localhost:5001/Module2/hello` to to run endpoint from Module2.
 
 
 #### To Run MultiTenant Application
-
-
+Execute following commands,
 ```dotnetcli
 cd MultiTenantApplication
 dotnet restore
