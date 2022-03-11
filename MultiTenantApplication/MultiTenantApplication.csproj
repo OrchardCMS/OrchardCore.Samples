@@ -15,7 +15,6 @@
 		<ProjectReference Include="..\Module2\Module2.csproj" />
 	</ItemGroup>
 
-
 	<ItemGroup>
 		<Folder Include="App_Data\" />
 	</ItemGroup>

@@ -18,8 +18,6 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
-
 app.UseOrchardCore();
 
 app.Run();
