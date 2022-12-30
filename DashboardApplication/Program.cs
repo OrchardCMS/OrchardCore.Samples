@@ -43,7 +43,7 @@ builder.Services.AddOrchardCore()
         var adminOptions = services.GetRequiredService<IOptions<AdminOptions>>();
         routes.MapFallback("/", req =>
         {
-            var redirectUrl = !string.IsNullOrEmpty(shellSettings.RequestUrlPrefix) ? $"/{shellSettings.RequestUrlPrefix}" : "";
+            var redirectUrl = !String.IsNullOrEmpty(shellSettings.RequestUrlPrefix) ? $"/{shellSettings.RequestUrlPrefix}" : "";
             redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}" ;
             req.Response.Redirect(redirectUrl);
             return Task.CompletedTask;
