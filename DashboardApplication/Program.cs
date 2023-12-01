@@ -36,15 +36,16 @@ builder.Services.AddOrchardCore()
         s.AddTagHelpers<ScriptTagHelper>();
         s.AddTagHelpers<StyleTagHelper>();
     })
-    
+
     // Fallback redirect to Admin dashboard
-    .Configure((app, routes, services) => {
+    .Configure((app, routes, services) =>
+    {
         var shellSettings = services.GetRequiredService<ShellSettings>();
         var adminOptions = services.GetRequiredService<IOptions<AdminOptions>>();
         routes.MapFallback("/", req =>
         {
             var redirectUrl = !String.IsNullOrEmpty(shellSettings.RequestUrlPrefix) ? $"/{shellSettings.RequestUrlPrefix}" : "";
-            redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}" ;
+            redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}";
             req.Response.Redirect(redirectUrl);
             return Task.CompletedTask;
         });
@@ -61,7 +62,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.MapGet("/", async context =>
+    {
+        var moduleLink = $"{context.Request.Scheme}://{context.Request.Host}/WeatherForecast";
+        var module2Link = $"{context.Request.Scheme}://{context.Request.Host}/Module2/hello";
+        await context.Response.WriteAsync($"<html><body>Hello from Dashboard application! " +
+            $"<br>Get the weather from Module1 at <a href=\"{moduleLink}\">{moduleLink}</a>" +
+            $"<br>or say hello to Module2 at <a href=\"{module2Link}\">{module2Link}</a>" +
+            $"<br>or check out the <a href=\"/admin\">admin dashboard</a></body><html>");
+    });
 app.UseOrchardCore();
 
 app.Run();

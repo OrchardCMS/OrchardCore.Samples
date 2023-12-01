@@ -24,7 +24,9 @@
 
         // Themes
         "TheAdmin",
-        "SafeMode"
+        "SafeMode",
+        "Module1",
+        "Module2"
       ]
     },
     {
