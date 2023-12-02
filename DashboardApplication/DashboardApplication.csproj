@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="OrchardCore.Admin" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Features" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Infrastructure" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Navigation" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Recipes" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Resources" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Roles" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Settings" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Setup" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Tenants" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Themes" Version="1.7.2" />
+		<PackageReference Include="OrchardCore.Users" Version="1.7.2" />
+		<PackageReference Include="SafeMode" Version="1.7.2" />
+		<PackageReference Include="TheAdmin" Version="1.7.2" />
+		<!-- If Module1 were a NuGet package instead of a project you could reference it this way: <PackageReference Include="Module1" Version="1.0.4" /> -->
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Module1\Module1.csproj" />
+		<ProjectReference Include="..\Module2\Module2.csproj" />
+	</ItemGroup>
+
+</Project>

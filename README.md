@@ -16,6 +16,12 @@ The homepage of this web application provides more information, and links to the
 
 A simple ASP.NET Core application that references the modules.
 
+### DashboardApplication
+
+An ASP.NET Core MVC application with Orchard Admin UI that references the modules projects.
+
+The application has minimal features and dependencies. There are users, roles and features management in admin UI. The sample contains a customizable minimal setup recipe.
+
 ### Module1
 
 A sample module containing ASP.NET Core MVC controllers, views, and pages.
