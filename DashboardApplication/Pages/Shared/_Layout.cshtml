@@ -1,10 +1,9 @@
-﻿@inject OrchardCore.Environment.Shell.Configuration.IShellConfiguration configuration
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - @configuration["CustomTitle"] - DashboardApplication</title>
+    <title>@ViewData["Title"] - DashboardApplication</title>
     <link rel="stylesheet" href="/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/site.css" />
 </head>
@@ -20,7 +19,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="~/">@configuration["CustomTitle"] Home</a>
+                            <a class="nav-link text-dark" href="~/">Home</a>
                         </li>
                     </ul>
                     <span class="navbar-text">
