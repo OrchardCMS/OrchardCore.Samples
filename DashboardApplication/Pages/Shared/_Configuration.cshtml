@@ -1,0 +1,11 @@
+﻿@using Microsoft.Extensions.Configuration
+@model IConfiguration
+<ul>
+    @foreach (var item in Model.GetChildren())
+    {
+        <li>
+            @item.Key: @item.Value
+            <partial name="_Configuration" model="@item" />
+        </li>
+    }
+</ul>
