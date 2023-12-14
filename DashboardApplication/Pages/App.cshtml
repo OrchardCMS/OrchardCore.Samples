@@ -1,0 +1,3 @@
+﻿@page "/app/{*rest}"
+@using AdminDashboard.Server
+@(await Html.RenderComponentAsync<App>(RenderMode.Server))

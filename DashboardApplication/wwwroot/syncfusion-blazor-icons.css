@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "sbicons";
+    src: url("fonts/syncfusion/icons.ttf?gcjn6a") format("truetype"), url("fonts/syncfusion/icons.woff?gcjn6a") format("woff"), url("fonts/syncfusion/icons.svg?gcjn6a#sbicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.syncfusion-blazor-icons {
+    font-family: "sbicons";
+    color: #FFF;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding-right: 13px;
+    font-size: 18px;
+}
+
+.syncfusion-blazor-icon-spinner:before {
+    content: "\e749";
+}
+
+.syncfusion-blazor-icon-search:before {
+    content: "\e925";
+}
+
+.syncfusion-blazor-icon-charts:before {
+    content: "\e715";
+}
+
+.syncfusion-blazor-icon-carousel:before { 
+    content: "\e757";
+ }
+
+.syncfusion-blazor-icon-diagram:before {
+    content: "\e72b";
+}
+
+.syncfusion-blazor-icon-sparklinecharts:before {
+    content: "\e740";
+}
+
+.syncfusion-blazor-icon-avatar:before {
+    content: "\e718";
+}
+
+.syncfusion-blazor-icon-badge:before {
+    content: "\e71f";
+}
+
+.syncfusion-blazor-icon-toast:before {
+    content: "\e72c";
+}
+
+.syncfusion-blazor-icon-buttongroup:before {
+    content: "\e71e";
+}
+
+.syncfusion-blazor-icon-bulletchart:before {
+    content: "\e748";
+}
+
+
+.syncfusion-blazor-icon-appbar:before { 
+	content: "\e758"; 
+}
+
+.syncfusion-blazor-icon-kanban:before {
+    content: "\e74a";
+}
+
+.syncfusion-blazor-icon-richtexteditor:before {
+    content: "\e70f";
+}
+
+.syncfusion-blazor-icon-pivottable:before {
+    content: "\e706";
+}
+
+.syncfusion-blazor-icon-colorpicker:before {
+    content: "\e756";
+}
+
+.syncfusion-blazor-icon-colorpalette:before {
+    content: "\e719";
+}
+
+.syncfusion-blazor-icon-wordprocessor:before {
+    content: "\e720";
+}
+
+.syncfusion-blazor-icon-heatmapchart:before {
+    content: "\e73e";
+}
+
+.syncfusion-blazor-icon-rangeselector:before {
+    content: "\e704";
+}
+
+.syncfusion-blazor-icon-smithchart:before {
+    content: "\e708";
+}
+
+.syncfusion-blazor-icon-toggleswitchbutton:before {
+    content: "\e709";
+}
+
+.syncfusion-blazor-icon-barcodegenerator:before {
+    content: "\e737";
+}
+
+.syncfusion-blazor-icon-treemap:before {
+    content: "\e70b";
+}
+
+.syncfusion-blazor-icon-circulargauge:before {
+    content: "\e710";
+}
+
+.syncfusion-blazor-icon-lineargauge:before {
+    content: "\e726";
+}
+
+.syncfusion-blazor-icon-datagrid:before {
+    content: "\e722";
+}
+
+.syncfusion-blazor-icon-spreadsheet:before {
+    content: "\e739";
+}
+
+.syncfusion-blazor-icon-formvalidator:before {
+    content: "\e71c";
+}
+
+.syncfusion-blazor-icon-dropdownlist:before {
+    content: "\e725";
+}
+
+.syncfusion-blazor-icon-combobox:before {
+    content: "\e732";
+}
+
+.syncfusion-blazor-icon-autocomplete:before {
+    content: "\e730";
+}
+
+.syncfusion-blazor-icon-multiselectdropdown:before {
+    content: "\e734";
+}
+
+.syncfusion-blazor-icon-calendar:before {
+    content: "\e738";
+}
+
+.syncfusion-blazor-icon-datepicker:before {
+    content: "\e703";
+}
+
+.syncfusion-blazor-icon-daterangepicker:before {
+    content: "\e72a";
+}
+
+.syncfusion-blazor-icon-numerictextbox:before {
+    content: "\e70c";
+}
+
+.syncfusion-blazor-icon-button:before {
+    content: "\e743";
+}
+
+.syncfusion-blazor-icon-textbox:before {
+    content: "\e724";
+}
+
+.syncfusion-blazor-icon-inputmask:before {
+    content: "\e717";
+}
+
+.syncfusion-blazor-icon-timepicker:before {
+    content: "\e70a";
+}
+
+.syncfusion-blazor-icon-rangeslider:before {
+    content: "\e735";
+}
+
+.syncfusion-blazor-icon-listview:before {
+    content: "\e71a";
+}
+
+.syncfusion-blazor-icon-dialog:before {
+    content: "\e73b";
+}
+
+.syncfusion-blazor-icon-tooltip:before {
+    content: "\e701";
+}
+
+.syncfusion-blazor-icon-treeview:before {
+    content: "\e72d";
+}
+
+.syncfusion-blazor-icon-toolbar:before {
+    content: "\e73d";
+}
+
+.syncfusion-blazor-icon-contextmenu:before {
+    content: "\e707";
+}
+
+.syncfusion-blazor-icon-tabs:before {
+    content: "\e727";
+}
+
+.syncfusion-blazor-icon-accordion:before {
+    content: "\e742";
+}
+
+.syncfusion-blazor-icon-pager:before {
+    content: "\e916";
+}
+
+.syncfusion-blazor-icon-sidebar:before {
+    content: "\e745";
+}
+
+.syncfusion-blazor-icon-datetimepicker:before {
+    content: "\e73f";
+}
+
+.syncfusion-blazor-icon-maps:before {
+    content: "\e73c";
+}
+
+.syncfusion-blazor-icon-fileupload:before {
+    content: "\e700";
+}
+
+.syncfusion-blazor-icon-card:before {
+    content: "\e741";
+}
+
+.syncfusion-blazor-icon-scheduler:before {
+    content: "\e747";
+}
+
+.syncfusion-blazor-icon-dropdownmenu:before {
+    content: "\e72f";
+}
+
+.syncfusion-blazor-icon-splitbutton:before {
+    content: "\e71b";
+}
+
+.syncfusion-blazor-icon-progressbutton:before {
+    content: "\e731";
+}
+
+.syncfusion-blazor-icon-menubar:before {
+    content: "\e746";
+}
+
+.syncfusion-blazor-icon-checkbox:before {
+    content: "\e736";
+}
+
+.syncfusion-blazor-icon-chips:before {
+    content: "\e721";
+}
+
+.syncfusion-blazor-icon-fileexplorer:before {
+    content: "\e72e";
+}
+
+.syncfusion-blazor-icon-querybuilder:before {
+    content: "\e705";
+}
+
+.syncfusion-blazor-icon-inplaceeditor:before {
+    content: "\e729";
+}
+
+.syncfusion-blazor-icon-pdfviewer:before {
+    content: "\e71d";
+}
+
+.syncfusion-blazor-icon-portlet:before {
+    content: "\e938";
+}
+
+.syncfusion-blazor-icon-splitter:before {
+    content: "\e744";
+}
+
+.syncfusion-blazor-icon-stockchart:before {
+    content: "\e73a";
+}
+
+.syncfusion-blazor-icon-treegrid:before {
+    content: "\e70d";
+}
+
+.syncfusion-blazor-icon-radiobutton:before {
+    content: "\e714";
+}
+
+.syncfusion-blazor-icon-ganttchart:before {
+    content: "\e713";
+}
+
+.syncfusion-blazor-icon-filemanager:before {
+    content: "\e711";
+}
+
+.syncfusion-blazor-icon-dashboardlayout:before {
+    content: "\e712";
+}
+
+.syncfusion-blazor-icon-listbox:before {
+    content: "\e723";
+}
+
+.syncfusion-blazor-icon-word:before {
+    content: "\e702";
+}
+
+.syncfusion-blazor-icon-excel:before {
+    content: "\e733";
+}
+
+.syncfusion-blazor-icon-pdf:before {
+    content: "\e70e";
+}
+
+.syncfusion-blazor-icon-powerpoint:before {
+    content: "\e728";
+}
+
+.syncfusion-blazor-icon-accumulationchart:before {
+    content: "\e74b";
+}
+
+.syncfusion-blazor-icon-progressbar:before {
+    content: "\e74c";
+}
+
+.syncfusion-blazor-icon-breadcrumb:before {
+    content: "\e754";
+}
+.syncfusion-blazor-icon-signature:before {
+    content: "\e755";
+}
+.syncfusion-blazor-icon-floatingactionbutton:before {
+    content: "\e759";
+}
+.syncfusion-blazor-icon-message:before {
+    content: "\e75a";
+}
+.syncfusion-blazor-icon-speeddial:before 
+{ 
+content: "\e75b";
+}
+.syncfusion-blazor-icon-skeleton:before 
+{ 
+content: "\e759"; 
+}
+.syncfusion-blazor-icon-mention:before 
+{ 
+content: "\e75c"; 
+}
+.syncfusion-blazor-icon-rating:before 
+{ 
+content: "\e75d"; 
+}
+.syncfusion-blazor-icon-mediaquery:before { 
+    content: "\e75e"; 
+}
+.syncfusion-blazor-icon-imageeditor:before {
+    content: "\e758";
+}
+.syncfusion-blazor-hide {
+    visibility: hidden;
+}

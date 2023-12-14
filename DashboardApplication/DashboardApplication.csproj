@@ -25,8 +25,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Module1\Module1.csproj" />
-		<ProjectReference Include="..\Module2\Module2.csproj" />
+	  <Folder Include="Views\Home\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AdminDashboard.Server\AdminDashboard.Server.csproj" />
 	</ItemGroup>
 
 </Project>
