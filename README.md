@@ -32,7 +32,7 @@ A sample module that registers custom middleware.
 
 ## Running
 
-### From Visual Studio 2019
+### From Visual Studio 2022
 
 Open the `OrchardCore.Samples.sln` solution file and run either application and visit its homepage (any project with a name ending in "Application"). 
 
