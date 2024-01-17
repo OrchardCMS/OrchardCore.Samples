@@ -1,11 +1,10 @@
-using Microsoft.Extensions.Options;
-using OrchardCore.Admin;
-using OrchardCore.Environment.Shell;
+using DashboardApplication.Controllers;
+using OrchardCore.Mvc.Core.Utilities;
 using OrchardCore.Recipes;
 using OrchardCore.ResourceManagement.TagHelpers;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllersWithViews();
 builder.Services.AddOrchardCore()
     .AddCommands()
     .AddSecurity()
@@ -36,19 +35,14 @@ builder.Services.AddOrchardCore()
         s.AddTagHelpers<ScriptTagHelper>();
         s.AddTagHelpers<StyleTagHelper>();
     })
-    
-    // Fallback redirect to Admin dashboard
-    .Configure((app, routes, services) => {
-        var shellSettings = services.GetRequiredService<ShellSettings>();
-        var adminOptions = services.GetRequiredService<IOptions<AdminOptions>>();
-        routes.MapFallback("/", req =>
-        {
-            var redirectUrl = !String.IsNullOrEmpty(shellSettings.RequestUrlPrefix) ? $"/{shellSettings.RequestUrlPrefix}" : "";
-            redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}" ;
-            req.Response.Redirect(redirectUrl);
-            return Task.CompletedTask;
-        });
-    }, 10000);
+
+    .Configure((app, routes, services) =>
+    {
+        routes.MapControllerRoute(
+            name: "home",
+            pattern: "/",
+            defaults: new { controller = typeof(HomeController).ControllerName(), action = nameof(HomeController.Index), area = "DashboardApplication" });
+    });
 
 var app = builder.Build();
 

@@ -1,0 +1,23 @@
+﻿@using OrchardCore.Environment.Shell
+
+@inject IShellHost ShellHost
+
+@{
+    var shellSettings = ShellHost.GetAllSettings();
+}
+
+<h3>Welcome to the Dashboard Application!</h3>
+
+
+@if (shellSettings.Count() > 1)
+{
+    <h5>Here is a list of your tenants</h5>
+    <ul>
+        @foreach (var shellSetting in shellSettings)
+        {
+            var url = (shellSetting.RequestUrlHost ?? string.Empty) + (!string.IsNullOrEmpty(shellSetting.RequestUrlPrefix) ? $"/{shellSetting.RequestUrlPrefix}" : string.Empty);
+
+            <li><a href="@url">@shellSetting.Name</a></li>
+        }
+    </ul>
+}
