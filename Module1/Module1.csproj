@@ -19,7 +19,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.Module.Targets" Version="1.8.0" />
+		<PackageReference Include="OrchardCore.Module.Targets" Version="1.8.2" />
 	</ItemGroup>
 
 </Project>
