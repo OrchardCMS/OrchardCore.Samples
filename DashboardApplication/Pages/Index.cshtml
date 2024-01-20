@@ -1,0 +1,32 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Module Endpoints</h2>
+<ul>
+    <li>
+        DashboardApplication - <span class="badge badge-success">default</span> <span class="badge badge-success">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="~/">Index Page</a></li>
+            <li><a href="~/admin">Admin Page</a></li>
+        </ul>
+    </li>
+    <li>
+        Module1 - <span class="badge badge-danger">default</span> <span class="badge badge-success">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="@(Url.Action("Index", "Home", new { area = "Module1" }))">Module1 Home Index Controller Action</a></li>
+            <li><a asp-area="Module1" asp-page="/about">Module1 About Page</a></li>
+            <li><a href="@(Url.Action("Get", "WeatherForecast", new { area = "Module1" }))">Module1 WeatherForecast Get Controller Action</a></li>
+            <li><a href="~/Module1/Kittens.jpg">Module1 wwwroot Kittens.jpg</a></li>
+        </ul>
+    </li>
+    <li>
+        Module2 - <span class="badge badge-danger">default</span> <span class="badge badge-danger">customer-a</span> <span class="badge badge-success">customer-b</span>
+        <ul>
+            <li><a href="~/Module2/hello">Module2 Hello Middleware</a></li>
+            <li><a href="~/info">Module2 Info Middleware</a></li>
+        </ul>
+    </li>
+</ul>

@@ -21,6 +21,8 @@
         "OrchardCore.Settings",
         "OrchardCore.Themes",
         "OrchardCore.Users",
+        "Module1",
+        "Module2",
 
         // Themes
         "TheAdmin",
