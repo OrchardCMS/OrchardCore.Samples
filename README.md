@@ -62,6 +62,7 @@ In the MultiTenantApplication sample, the appsettings.json is used to configure 
 An ASP.NET Core Blazor application as decoupled CMS.
 
 Open the `OCBlazor\OCBlazor.sln` solution file and run application. Setup the default tenant and create content item as described in creating blazor application for decoupled cms guide.
+Navigate to `/home` to laod Blazor app.
 
 
 ## Creating new Modules
