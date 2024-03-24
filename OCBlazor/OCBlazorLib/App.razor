@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@inject NavigationManager NavManager
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<base href="/" />
+	<base href=@_baseUrl />
 	<link rel="stylesheet" href="OrchardCore.Resources/Styles/bootstrap.min.css" />
 	<link rel="stylesheet" href="_content/OCBlazorLib/OCBlazorLib.bundle.scp.css" />
 	<HeadOutlet />
@@ -15,3 +17,14 @@
 	<script src="_framework/blazor.web.js"></script>
 </body>
 </html>
+
+@code
+{
+	protected string _baseUrl = "/";
+
+	protected override void OnParametersSet()
+	{
+		base.OnParametersSet();
+		_baseUrl = NavManager.BaseUri;
+	}
+}
