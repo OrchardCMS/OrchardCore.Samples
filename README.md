@@ -56,6 +56,15 @@ The tenants can be modified by editing the "OrchardCore" section of the appsetti
 Note that tenants.json is no longer supported in Orchard Core Framework applications, and tenant information is read from the "OrchardCore" section provided by any of the configuration providers.
 In the MultiTenantApplication sample, the appsettings.json is used to configure the "OrchardCore" section.
 
+
+### Decoupled CMS - Blazor Sample 
+
+An ASP.NET Core Blazor application as decoupled CMS.
+
+Open the `OCBlazor\OCBlazor.sln` solution file and run application. Setup the default tenant and create content item as described in creating blazor application for decoupled cms guide.
+Navigate to `/home` to laod Blazor app.
+
+
 ## Creating new Modules
 
 Modules can be .NET Standard 2.0 class libraries or .NET Core 3.0 class libraries that reference the **OrchardCore.Module.Targets** Nuget Package.
