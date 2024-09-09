@@ -36,15 +36,16 @@ builder.Services.AddOrchardCore()
         s.AddTagHelpers<ScriptTagHelper>();
         s.AddTagHelpers<StyleTagHelper>();
     })
-    
+
     // Fallback redirect to Admin dashboard
-    .Configure((app, routes, services) => {
+    .Configure((app, routes, services) =>
+    {
         var shellSettings = services.GetRequiredService<ShellSettings>();
         var adminOptions = services.GetRequiredService<IOptions<AdminOptions>>();
         routes.MapFallback("/", req =>
         {
             var redirectUrl = !String.IsNullOrEmpty(shellSettings.RequestUrlPrefix) ? $"/{shellSettings.RequestUrlPrefix}" : "";
-            redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}" ;
+            redirectUrl += $"/{adminOptions.Value.AdminUrlPrefix}";
             req.Response.Redirect(redirectUrl);
             return Task.CompletedTask;
         });
