@@ -11,14 +11,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 
-app.UseEndpoints(endpoints =>
+app.MapGet("/", async context =>
 {
-    endpoints.MapGet("/", async context =>
-    {
-        await context.Response.WriteAsync($"Hello from ModularApplication! " +
-            $"Get the weather from Module1 at {context.Request.Scheme}://{context.Request.Host}/WeatherForecast " +
-            $"or say hello to Module2 at {context.Request.Scheme}://{context.Request.Host}/Module2/hello");
-    });
+    await context.Response.WriteAsync($"Hello from ModularApplication! " +
+        $"Get the weather from Module1 at {context.Request.Scheme}://{context.Request.Host}/WeatherForecast " +
+        $"or say hello to Module2 at {context.Request.Scheme}://{context.Request.Host}/Module2/hello");
 });
 
 app.UseOrchardCore();
