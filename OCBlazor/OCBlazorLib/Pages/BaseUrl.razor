@@ -1,0 +1,54 @@
+﻿@page "/baseurl"
+
+@using Microsoft.AspNetCore.Http
+@using OrchardCore.Environment.Shell.Scope
+
+@inject ISiteService SiteService
+@inject NavigationManager NavigationManager
+
+<PageTitle>BaseUrl - @Site?.SiteName</PageTitle>
+
+<h3>BaseUrl</h3>
+<ul>
+    <li>Shell scope request url prefix: @_baseUrlShellScope</li>
+    <li>Navigation Manager base URI: @_baseUrlNavigationManager</li>
+    <li>Http Context base PathBase: @_baseUrlHttpContext</li>
+    <li>Site Settings base Url: @_baseUrlSiteSettings</li>
+</ul>
+
+<OCBlazorLib.Components.InteractiveButton @rendermode="RenderMode.InteractiveServer" />
+
+@code {
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    protected ISite? Site { get; set; }
+
+    protected string? _baseUrlShellScope;
+    protected string? _baseUrlNavigationManager;
+    protected string? _baseUrlHttpContext;
+    protected string? _baseUrlSiteSettings;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        Site = await SiteService.GetSiteSettingsAsync();
+
+        _baseUrlShellScope = ShellScope.Context.Settings.RequestUrlPrefix;
+        if (!String.IsNullOrEmpty(_baseUrlShellScope)) { _baseUrlShellScope = $"/{_baseUrlShellScope}/"; }
+        else { _baseUrlShellScope = "/"; }
+
+        _baseUrlNavigationManager = NavigationManager.BaseUri;
+
+        _baseUrlHttpContext = HttpContext?.Request.PathBase;
+        if (!String.IsNullOrEmpty(_baseUrlHttpContext)) { _baseUrlHttpContext = $"{_baseUrlHttpContext}/"; }
+        else { _baseUrlHttpContext = "/"; }
+
+        _baseUrlSiteSettings = Site.BaseUrl;
+        if (String.IsNullOrEmpty(_baseUrlSiteSettings)) { _baseUrlSiteSettings = $"{_baseUrlSiteSettings}/"; }
+    }
+
+
+}
