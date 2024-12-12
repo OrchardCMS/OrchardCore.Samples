@@ -1,0 +1,30 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OrchardCoreVersion>2.1.3-preview-18440</OrchardCoreVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- OrchardCore Packages -->
+    <PackageVersion Include="OrchardCore.Admin" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Features" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Infrastructure" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Navigation" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Recipes" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Resources" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Roles" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Settings" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Setup" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Tenants" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Themes" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Users" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="OrchardCore.Module.Targets" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="TheAdmin" Version="$(OrchardCoreVersion)" />
+    <PackageVersion Include="SafeMode" Version="$(OrchardCoreVersion)" />
+   
+  </ItemGroup>
+</Project>
