@@ -1,7 +1,7 @@
 <Project>
 
   <PropertyGroup>
-    <OrchardCoreVersion>2.1.6-preview-18513</OrchardCoreVersion>
+    <OrchardCoreVersion>2.1.6</OrchardCoreVersion>
   </PropertyGroup>
 
 </Project>
