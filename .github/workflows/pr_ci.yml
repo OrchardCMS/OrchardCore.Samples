@@ -1,13 +1,17 @@
 name: PR - CI
+  
 on: 
   pull_request:
     branches: [ main ]
+
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
+
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
+
 jobs:
   build_test:
     runs-on: ${{ matrix.os }}
