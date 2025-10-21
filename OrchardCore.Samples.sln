@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC55DC3E-7C9E-4599-B7B4-6372B8E0CFB4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
 		LICENSE.txt = LICENSE.txt
 		NuGet.config = NuGet.config
 		README.md = README.md
@@ -24,6 +25,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCBlazorLib", "OCBlazor\OCBlazorLib\OCBlazorLib.csproj", "{E7C06647-1E64-4B6F-9728-78F578B87404}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCms", "OCBlazor\BlazorCms\BlazorCms.csproj", "{5A21FE91-A534-4AFB-BB70-DE1313F5CE5F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{8BC87CB0-F8FD-427D-8F6D-CC95D6EA23FA}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +69,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BC87CB0-F8FD-427D-8F6D-CC95D6EA23FA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AD5090C-3961-4E2B-9C72-D91ED2E7C1FA}
