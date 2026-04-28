@@ -9,7 +9,7 @@ builder.Services
     .AddOrchardCms()
     .ConfigureServices(services => {
         services.AddRazorComponents()
-       .AddInteractiveServerComponents()
+           .AddInteractiveServerComponents()
        ;
 
     })
