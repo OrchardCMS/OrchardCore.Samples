@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="3.0.0-preview-19005" />
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
 	</ItemGroup>
 
 	<ItemGroup>
