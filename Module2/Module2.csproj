@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
 		<OutputType>Library</OutputType>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
 		<PackageReference Include="OrchardCore.Module.Targets" Version="$(OrchardCoreVersion)" />
 	</ItemGroup>
 

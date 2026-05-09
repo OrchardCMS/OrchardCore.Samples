@@ -1,24 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
 		<OutputType>Library</OutputType>
 		<IsPackable>true</IsPackable>
 		<PackageVersion>1.0.4</PackageVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Remove="Pages\_ViewStart.cshtml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="Pages\_ViewStart.cshtml">
-			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
 		<PackageReference Include="OrchardCore.Module.Targets" Version="$(OrchardCoreVersion)" />
 	</ItemGroup>
 

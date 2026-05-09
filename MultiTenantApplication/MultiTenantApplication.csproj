@@ -1,12 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
-
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="3.0.0-preview-19005" />
 		<!-- If Module1 were a NuGet package instead of a project you could reference it this way: <PackageReference Include="Module1" Version="1.0.4" /> -->
 	</ItemGroup>
 
