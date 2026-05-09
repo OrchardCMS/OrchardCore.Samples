@@ -1,0 +1,50 @@
+﻿@page "/content/{alias}"
+@attribute [StreamRendering]
+@using OrchardCore.ContentManagement.Models
+@inject IContentHandleManager handleManager
+@inject IContentManager contentManager
+@inject ISiteService SiteService
+
+<PageTitle>@ContentItem?.DisplayText - @Site?.SiteName</PageTitle>
+
+
+@if (Markup is null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+
+	<h1>@ContentItem?.DisplayText</h1>
+	@((MarkupString)Markup)
+
+}
+@code
+{
+	[ParameterAttribute]
+	public string Alias { get; set; }
+
+	protected ContentItem ContentItem { get; set; }
+	protected string Markup { get; set; }
+	protected ISite? Site { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		Site = await SiteService.GetSiteSettingsAsync();
+	}
+
+	protected override async Task OnParametersSetAsync()
+	{
+		string id = await handleManager.GetContentItemIdAsync($"alias:{Alias}");
+		ContentItem = await contentManager.GetAsync(id, VersionOptions.Published);
+		if(ContentItem is not null)
+		{
+			var bodyAspect = await contentManager.PopulateAspectAsync<BodyAspect>(ContentItem);
+			Markup = bodyAspect?.Body.ToString() ?? "No content body was found";
+		}
+		else
+		{
+			Markup = $"No content was found for this alias {Alias}";
+		}
+	}
+}

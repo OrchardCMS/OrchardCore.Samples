@@ -1,0 +1,15 @@
+﻿<h3>Interactivity test</h3>
+
+<button class="btn-primary" @onclick="Clicked">Test</button>
+<hr />
+@_interactiveFeedback
+
+@code {
+
+    protected string? _interactiveFeedback;
+
+    protected void Clicked()
+    {
+        _interactiveFeedback = $"Clicked! [{DateTime.Now.ToLocalTime()}]";
+    }
+}
