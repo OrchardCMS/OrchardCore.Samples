@@ -1,7 +1,7 @@
 <Project>
 
 	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<OrchardCoreVersion>2.2.1</OrchardCoreVersion>
 	</PropertyGroup>
