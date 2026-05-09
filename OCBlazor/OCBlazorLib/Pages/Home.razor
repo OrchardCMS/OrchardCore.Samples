@@ -1,0 +1,19 @@
+﻿@page "/home"
+
+@inject ISiteService SiteService
+
+<PageTitle>Home - @Site?.SiteName</PageTitle>
+
+<h1>Hello, Orchard!</h1>
+
+<p>Welcome to your new Blazor CMS app.</p>
+
+@code {
+    protected ISite? Site { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Site = await SiteService.GetSiteSettingsAsync();
+
+    }
+}
