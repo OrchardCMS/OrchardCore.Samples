@@ -5,7 +5,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="$(OrchardCoreVersion)" />
 		<PackageReference Include="OrchardCore.Module.Targets" Version="$(OrchardCoreVersion)" />
 	</ItemGroup>
 
