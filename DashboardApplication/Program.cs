@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Options;
 using OrchardCore.Admin;
 using OrchardCore.Environment.Shell;
-using OrchardCore.Recipes;
 using OrchardCore.ResourceManagement.TagHelpers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +20,6 @@ builder.Services.AddOrchardCore()
     .AddTheming()
     //.AddLiquidViews()
     .AddCaching()
-    .ConfigureServices(services => services
-        .AddRecipes())
 
     // OrchardCoreBuilder is not available in OrchardCore.ResourceManagement as it has to
     // remain independent from OrchardCore.
