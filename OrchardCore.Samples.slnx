@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/ci.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="LICENSE.txt" />
+    <File Path="NuGet.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="DashboardApplication/DashboardApplication.csproj" />
+  <Project Path="ModularApplication/ModularApplication.csproj" />
+  <Project Path="Module1/Module1.csproj" />
+  <Project Path="Module2/Module2.csproj" />
+  <Project Path="MultiTenantApplication/MultiTenantApplication.csproj" />
+</Solution>
